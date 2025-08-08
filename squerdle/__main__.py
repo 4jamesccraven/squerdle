@@ -2,6 +2,7 @@
 from .cli import cli
 from .filters import filter_from_args
 from .words import WORDS
+from .summarise import distribution
 
 
 def main() -> None:
@@ -10,7 +11,10 @@ def main() -> None:
 
     matches = [word for word in WORDS if all(f(word) for f in filters)]
 
-    print('\n'.join(matches))
+    if args.distribution:
+        print(distribution(matches))
+    else:
+        print('\n'.join(matches))
 
 
 if __name__ == '__main__':

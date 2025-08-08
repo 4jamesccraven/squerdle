@@ -29,6 +29,11 @@ def cli() -> Args:
                         nargs='*',
                         type=parse_kv,)
 
+    parser.add_argument('-s', '--distribution',
+                        help='Summarise the distribution of characters'
+                        ' in matching words',
+                        action='store_true')
+
     args = parser.parse_args()
 
     return args
