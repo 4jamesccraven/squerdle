@@ -1,6 +1,9 @@
 # squerdle
 A simple Python script that I made to cheat at Wordle.
 
+> [!NOTE]
+> I [rewrote it](https://github.com/4jamesccraven/glosse) in Rust... what a surprise
+
 ## ... Why?
 My friends decided to add a Wordle bot to our Discord server, and I thought it
 would be fun to automate the process.
